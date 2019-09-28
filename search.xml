@@ -110,16 +110,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo如何添加炫酷的地球模型]]></title>
-    <url>%2F2019%2F09%2F08%2F00005%2F</url>
-    <content type="text"><![CDATA[简言如何给我们的博客加上炫酷的3D地球模型呢，可以显示全球访问的地址和当前用户的地址是不是很厉害！这里我们使用RevolverMaps插件，一起来看看吧！ 获取代码这里访问官网，我这里直接贴出来设置的地址，选择1,2,3,4你喜欢的样式，右面会出现样式示例。最后在第5步那里形成的代码就是所需获取的代码。http://www.revolvermaps.com/?target=setup我这里提供代码，大家可以直接使用 1&lt;script type=&quot;text/javascript&quot; src=&quot;//rf.revolvermaps.com/0/0/8.js?i=59ccsxtrqut&amp;amp;m=0&amp;amp;c=ff0000&amp;amp;cr1=ffffff&amp;amp;f=arial&amp;amp;l=33&quot; async=&quot;async&quot;&gt;&lt;/script&gt; 添加至博客中效果如图因为我们是在博客的右侧栏添加内容，就得了解它右侧栏是如何显示的，如图三所示，右边所有的栏目都有一个pug文件，这里我们按部就班新建一个card_map.pug.将代码copy进去然后编辑图四的文件加入下面的代码 12if theme.aside.card_webinfo include widget/card_webinfo.pug]]></content>
+    <title><![CDATA[Github pagers搭建的博客使用自定义域名以及购买域名等设置]]></title>
+    <url>%2F2019%2F09%2F08%2F00002%2F</url>
+    <content type="text"><![CDATA[一、简言由于有个人需求，需要使用到域名，思来想去还是有一个自己的域名好一点，也就是钱的问题，而且域名现在也不贵，拿出自己的部分零花钱购买一个域名也不为过。这里记录下自己在阿里云购买域名的过程。当然了大家也可以在其他平台购买域名，主流的有Daddy、阿里云、腾讯云、华为云等等。 二、 购买域名阿里云平台登录阿里云，万网已经被阿里爸爸收购了，所以在这里我们看到是阿里云旗下品牌，在此选项框输入自己想好的域名看看有没有被占用。 https://account.aliyun.com 后缀名有很多，根据名称有不同的寓意，例如.top展现行业地位、.xin网络诚信专属域名、.cloud云端域名、.space你的专属网络空间。不同的域名价格也不太一样。贵的类似于.com .我爱你 .cn等等。我这里就选择购买了.space的后缀名。写入域名之后，下面会出现域名的情况，选择满意的加入到清单中 然后点击立即结算即可完成，完成之后我们进入至控制台。 这样我们就看到自己购买的域名列表了。在解析之前，我们要完成实名认证才可以去使用它。 这大概要两三天的时间，完成实名认证之后，我们就可以添加域名解析了。 点击解析设置，进入解析我们的域名 添加记录 记录类型点击将域名指向一个地址 主机记录写@，解析线路默认，记录值这里我们写ping自己的博客的地址，TTL为10分钟 再写一个主机记录修改为www。两个记录类型已经完成，这里我们的阿里云就完成设置了。 Github配置hexo添加CNAME在hexo本地目录 source 目录下面新建一个文件，取名为 GNAME (无后缀)，内容就是上面所说到的自己的域名如下： 1liuxiangyang.space 运行hexo指令使配置修改起效： 12hexo g //会在public中生成一个GNAME文件hexo d //修改内容提交到github博客上 Github绑定个人域名这是比较重要的一步，打开博客在Github中的地址，然后切换到 Settings页，设置Custom domain内容为我们自己的域名值（例如：我的域名是liuxiangyang.space），点击Save按钮保存： 小知识总结这样我们就完成了使用自己域名解析到自己的博客中，美美哒，访问我们的域名地址即可进入到博客。]]></content>
       <categories>
         <category>GitHub</category>
         <category>Hexo</category>
       </categories>
       <tags>
         <tag>blog</tag>
-        <tag>revolvermaps</tag>
       </tags>
   </entry>
   <entry>
@@ -135,15 +134,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[博客编辑器最佳推荐]]></title>
-    <url>%2F2019%2F09%2F08%2F00014%2F</url>
-    <content type="text"><![CDATA[简言博客搭建好之后，我们就要去完善其内容，将工作中的笔记和教程以及好用的软件总结成文章。使用了一段时间之后，总结了几个编辑工具，推荐给大家！ 软件推荐Notepad这个就不用了介绍了，大家熟知的类似于加强版的文本编辑工具。 HexoEditor这个看名字就知道了,与Hexo结合的博客编辑工具，当然了在使用之前要先装好Git和Node.js。提供左右两种视图， 左边修改文档，右边直接显示生成的界面。这是一款为 Hexo 做了优化的 Markdown 编辑器,使用 Electron 做框架修改自 Moeditor,同时它还包括很多功能，其中我觉得最有用的就是：预览内容与 Hexo 生成页面内容高度相似。这里因为它是Github的发布的开源项目，提供下载地址https://github.com/zhuzhuyule/HexoEditor/releases Typora这是一款极致简洁的 markdown 编辑器。简洁到连编辑栏工具都没有，不过用起来很舒服，谁用谁知道。这里提供下载链接，然后下载对应的版本即可。 https://www.typora.io/]]></content>
+    <title><![CDATA[Windows下使用Github Pages+Hexo搭建博客(详细快捷)]]></title>
+    <url>%2F2019%2F09%2F08%2F00012%2F</url>
+    <content type="text"><![CDATA[简言在互联网渗透到个人，自媒体信息爆炸的今天，大家都希望有一个归自己所有、掌控的个人博客。因为无论是记录生活，还是分享技术，自定义博客都可以按照自己的要求，为自己提供熨帖的服务，而不必受到条条框框的限制。但是普通用户又囿于没有高超的编程技术和前端本领，而在自定义博客面前望而却步了。本文的目标就是通过介绍 Hexo+Github/Coding.net+Travis CI+形成一套完整的个人博客自动构建、部署、国内国外双线路负载均衡的系统。真正做到随时随地写文章，一键部署到网站的全自动化流水线。 Hexo 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 Markdown 作为书写语言，极大地方便了博客的撰写。 前面的文章总结了现有的博客类型以及根据现有的情况推荐使用的方式搭建博客。这个时代在发展中，个人也是要有点追求的。使用第三方的博客虽说不用怎么维护，但是这种”寄人篱下”的感觉总归不是太好的，说不定哪一天人家的数据库爆炸服务器没了，咱们的资料可是找不回来的。玩笑归玩笑，主要还是技术需要提升。咱这个最初的阶段(CSDN使用)使用了一段时间了，这里我们进入第二个阶段使用Github Pages+静态网站生成技术搭建博客，静态网站搭建技术也有许多，查阅了资料后较为推荐使用Hexo，当然也可以使用jekyll和hugo。(至于为什么使用Github，当然是因为免费的，可以提供域名让人家能访问到你，如果你有自己的服务器和域名推荐使用更好的方式,例如Wordpress等等)这里总结一下Github Pages+Hexo的方式，中间的很多坑也是搞的自己很头疼，这里也总结出一些容易犯的问题以供参考。好了这里直接进入正题！我们为了更好的记录此次搭建过程，这里分为五个步骤 注册GitHub账号1.浏览器访问GitHub官方网站 1https://github.com/ 进入官网页面之后，写好用户名、邮箱、密码信息，然后点击Sign up for Github。 此处需要注意：Username、Email和Pssword一定要记住，后边要多次使用，如果太长比较难记，建议最好记在本子上，而且用户名一定要三思，想好之后后面尽量不要改，否则会有麻烦2.注册完登录之后，先选中Unlimited public repositories for free(默认是选中的)，再点击Continue即可。接下来，直接点击skip this step3.然后如下图所示，先点击头像右边向下的小箭头，再选择Your profile。 然后先点击右上角的“+”，再点击New repository。这时会验证你的邮箱，将收到的6位码填入，邮箱通过验证之后，这里需要就要输入新建仓库的信息这里我们输入仓库名，它的写法是这样的,可不要任性去随意定义，就是username.github.io。这里我可吃了亏，否则是会失败的。其他的内容不需要操作，默认的public即可。 1234eg:Owner:LiuXiangYang-Git对应的仓库名就是LiuXiangYang-Git.github.io 恭喜，至此Github注册完成并创建了GitHub Pages个人博客的仓库（Repository）。 关于Github的使用我知道的也不多，这里也就不详细的介绍它了，如果有想要了解的可以自行百度相关教程 安装Node.jsNode.js官网下载地址，安装过程没什么可说的，一直点下一步即可。注意要规划好安装的目录，这里我们为了此次教程专门新建一个大的文件夹专门存放此次实践，这也是一个好的习惯！ 1https://nodejs.org/zh-cn/ 安装完成！ 安装GitGit官网下载地址，安装过程也是没什么可说的，虽然中间步骤很多要选的选项也是不少，不过我们也是统统Next即可 1https://git-scm.com/downloads 安装完成！ Git配置SSH1.安装完Git之后，我们需要使用SSH将本地Git项目与远程的GitHub建立联系。这里我们发现Git安装之后会生成两个快捷方式，这里我们需要使用Git Bash点击Git Bash 12345依次输入：git config --global user.name &quot;Your Username&quot; #要输入你的用户名(Github)git config --global user.email &quot;Your Email Address&quot; #要输入你的邮箱地址(Github) 注意这里Your Username和Your Email Address就是注册GitHub账号时的用户名和邮箱。因为使用仓库前，要通过Username和Email标明自己的身份。2.保持刚才的窗口继续输入以下命令 123cd ~/.sshssh-keygen -t rsa -C &quot;Your Email Address&quot; 注意在输入cd ~/.ssh时，如果提示：No such file or directory， 说明你是第一次使用Git，没有影响。cd ~/.ssh用来检查本机的ssh密钥，ssh-keygen -t rsa -C “Your Email Address”用于生成新的SSH Key。执行命令之后，出现下面内容 123Generating public/private rsa key pair.Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa): 这里我们直接敲击回车然后会出现提示输入密码Enter passphrase (empty for no passphrase):【输入加密串】【加密串我们看不见，所以你输密码的时候不要以为没输入进去，你直接输入就好，输完密码按回车键确定就行】Enter same passphrase again:【再次输入加密串】如果密码输入不一致，会提示再次输入：Passphrases do not match. Try again.这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。如果出现下图的界面，就说明key生成成功。同时从Your public key has been saved in /c/Users/User/.ssh/id_rsa.pub.能看到ssh key保存的位置。 添加 SSH Key 到 GitHub1.继续返回到我们的Github网站中，按照顺序点击右上角的头像-Settings-SSH and GPG keys -New SSH key2.然后使用Notepad++打开本地id_rsa.pub文件，也就是刚才生成的SSH key。如果看不到这个文件，需要设置显示隐藏的文件。将本地文件里的SSH key全选复制粘贴到刚刚GitHub上通过New SSH key创建的key方框里，Title随便写或者直接空着不写也可以，直接点击Add SHH key就好了。3.在GitHub添加SSH key之后，我们需要测试是否添加成功，输入ssh -T git@github.com，如果出现下图的问题，没关系直接输入yes即可！ 1234567The authenticity of host &apos;github.com (192.30.255.113)&apos; can&apos;t be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.Are you sure you want to continue connecting (yes/no)?输入yes之后输入我们项目的密码nter passphrase for key &apos;/c/Users/User/.ssh/id_rsa&apos;:【这里的密码也是加密串】 4.当系统出现如下提示时，说明成功了。 1Hi HandsomeSuperRed! You&apos;ve successfully authenticated, but GitHub does not provide shell access. Hexo安装刚才的准备工作做了一大堆，也没有看到实在的东西，这里我们进行到这一步就可以有本地的博客了。开始喽！1.首选安排好你的博客安装路径，在此路径右击找到GitBash,例如我们的目录为D:\Myblog\Blog，右击Git Bash Here 2.打开Git Bash以后输入npm install -g hexo-cli安装Hexo，安装好以后不要关闭Git Bash，接下来还要用。Hexo有它的默认路径，能够看到Hexo都安装在了C盘。 Hexo部署1.安装好hexo之后，我们需要执行下面三条命令进行初始化工作 12345hexo init &lt;folder&gt; #初始化hexo(是你要保存博客内容的文件夹的名字。)cd &lt;folder&gt; #进入此目录npm install #安装 其中， 例如我想将博客保存在Hexo目录中，那我就使用hexo init Hexo命令。如果你不想用Hexo命名，你想将文件夹叫做Handsome，那你可以使用Hexo init Handsome命令。所以上面三个命令就是： 12345hexo init Hexocd Hexonpm install 执行命令的界面所示2.三条命令执行过后，看一下我们刚才Hexo的目录内容，其中_config.yml文件是我们用的比较多的配置文件3.Hexo初始化之后，我们需要部署并且开启服务，执行下面三条命令 12345hexo generatehexo deploy hexo server 效果如下图所示4.然后系统会出现如下提示： 123INFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 浏览器访问http://localhost:4000/，发现Hexo在本地已经部署好了！ 将本地文件(Hexo)部署至Github1.找到我们上面说的Hexo的配置文件使用工具打开进行编辑，找到deploy一项修改成如图所示 1234deploy: type: git repo: git@github.com:LiuXiangYang-Git/LiuXiangYang-Git.github.io.git branch: master 注意这里的repo需要进行修改更改成自己的地址，获取方式如下，将其复制到type后面即可，还有一个需要注意的地方是冒号后面一定要加空格，否则部署会失败 2.更改完之后保存，这里我们就可以使用hexo命令发布到仓库中了，还是同样的命令(发布到本地) 12345hexo cleanhexo generatehexo deploy 如果出现下面的提示恭喜你成功了！3.这时就已经部署到 GitHub 上了，可以到你的GitHub仓库查看是否已经更新。4.成功之后，这个地址就是我们的博客域名了，可以使用他来访问你的博客，当然如果你有自己的博客，也可以修改成自己的。 1https://liuxiangyang-git.github.io/ 只要将一级域名更改成你的账户名即可！5.后面教程我们在详细实践如何自定义网站内容，我也是在摸索后面持续更新。。。 总结一顿操作下来虽然有点儿累，但看见拥有了自己的博客还是非常有成就感的，人生就是需要折腾，那么现在就开始你的创作之旅吧！文章的不断积累，你会从中受益很多的！]]></content>
       <categories>
-        <category>Window</category>
+        <category>GitHub</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>blog</tag>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -168,6 +167,19 @@
       <tags>
         <tag>system</tag>
         <tag>software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo如何添加炫酷的地球模型]]></title>
+    <url>%2F2019%2F09%2F08%2F00005%2F</url>
+    <content type="text"><![CDATA[简言如何给我们的博客加上炫酷的3D地球模型呢，可以显示全球访问的地址和当前用户的地址是不是很厉害！这里我们使用RevolverMaps插件，一起来看看吧！ 获取代码这里访问官网，我这里直接贴出来设置的地址，选择1,2,3,4你喜欢的样式，右面会出现样式示例。最后在第5步那里形成的代码就是所需获取的代码。http://www.revolvermaps.com/?target=setup我这里提供代码，大家可以直接使用 1&lt;script type=&quot;text/javascript&quot; src=&quot;//rf.revolvermaps.com/0/0/8.js?i=59ccsxtrqut&amp;amp;m=0&amp;amp;c=ff0000&amp;amp;cr1=ffffff&amp;amp;f=arial&amp;amp;l=33&quot; async=&quot;async&quot;&gt;&lt;/script&gt; 添加至博客中效果如图因为我们是在博客的右侧栏添加内容，就得了解它右侧栏是如何显示的，如图三所示，右边所有的栏目都有一个pug文件，这里我们按部就班新建一个card_map.pug.将代码copy进去然后编辑图四的文件加入下面的代码 12if theme.aside.card_webinfo include widget/card_webinfo.pug]]></content>
+      <categories>
+        <category>GitHub</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>revolvermaps</tag>
       </tags>
   </entry>
   <entry>
@@ -207,18 +219,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Windows下使用Github Pages+Hexo搭建博客(详细快捷)]]></title>
-    <url>%2F2019%2F09%2F08%2F00012%2F</url>
-    <content type="text"><![CDATA[简言在互联网渗透到个人，自媒体信息爆炸的今天，大家都希望有一个归自己所有、掌控的个人博客。因为无论是记录生活，还是分享技术，自定义博客都可以按照自己的要求，为自己提供熨帖的服务，而不必受到条条框框的限制。但是普通用户又囿于没有高超的编程技术和前端本领，而在自定义博客面前望而却步了。本文的目标就是通过介绍 Hexo+Github/Coding.net+Travis CI+形成一套完整的个人博客自动构建、部署、国内国外双线路负载均衡的系统。真正做到随时随地写文章，一键部署到网站的全自动化流水线。 Hexo 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 Markdown 作为书写语言，极大地方便了博客的撰写。 前面的文章总结了现有的博客类型以及根据现有的情况推荐使用的方式搭建博客。这个时代在发展中，个人也是要有点追求的。使用第三方的博客虽说不用怎么维护，但是这种”寄人篱下”的感觉总归不是太好的，说不定哪一天人家的数据库爆炸服务器没了，咱们的资料可是找不回来的。玩笑归玩笑，主要还是技术需要提升。咱这个最初的阶段(CSDN使用)使用了一段时间了，这里我们进入第二个阶段使用Github Pages+静态网站生成技术搭建博客，静态网站搭建技术也有许多，查阅了资料后较为推荐使用Hexo，当然也可以使用jekyll和hugo。(至于为什么使用Github，当然是因为免费的，可以提供域名让人家能访问到你，如果你有自己的服务器和域名推荐使用更好的方式,例如Wordpress等等)这里总结一下Github Pages+Hexo的方式，中间的很多坑也是搞的自己很头疼，这里也总结出一些容易犯的问题以供参考。好了这里直接进入正题！我们为了更好的记录此次搭建过程，这里分为五个步骤 注册GitHub账号1.浏览器访问GitHub官方网站 1https://github.com/ 进入官网页面之后，写好用户名、邮箱、密码信息，然后点击Sign up for Github。 此处需要注意：Username、Email和Pssword一定要记住，后边要多次使用，如果太长比较难记，建议最好记在本子上，而且用户名一定要三思，想好之后后面尽量不要改，否则会有麻烦2.注册完登录之后，先选中Unlimited public repositories for free(默认是选中的)，再点击Continue即可。接下来，直接点击skip this step3.然后如下图所示，先点击头像右边向下的小箭头，再选择Your profile。 然后先点击右上角的“+”，再点击New repository。这时会验证你的邮箱，将收到的6位码填入，邮箱通过验证之后，这里需要就要输入新建仓库的信息这里我们输入仓库名，它的写法是这样的,可不要任性去随意定义，就是username.github.io。这里我可吃了亏，否则是会失败的。其他的内容不需要操作，默认的public即可。 1234eg:Owner:LiuXiangYang-Git对应的仓库名就是LiuXiangYang-Git.github.io 恭喜，至此Github注册完成并创建了GitHub Pages个人博客的仓库（Repository）。 关于Github的使用我知道的也不多，这里也就不详细的介绍它了，如果有想要了解的可以自行百度相关教程 安装Node.jsNode.js官网下载地址，安装过程没什么可说的，一直点下一步即可。注意要规划好安装的目录，这里我们为了此次教程专门新建一个大的文件夹专门存放此次实践，这也是一个好的习惯！ 1https://nodejs.org/zh-cn/ 安装完成！ 安装GitGit官网下载地址，安装过程也是没什么可说的，虽然中间步骤很多要选的选项也是不少，不过我们也是统统Next即可 1https://git-scm.com/downloads 安装完成！ Git配置SSH1.安装完Git之后，我们需要使用SSH将本地Git项目与远程的GitHub建立联系。这里我们发现Git安装之后会生成两个快捷方式，这里我们需要使用Git Bash点击Git Bash 12345依次输入：git config --global user.name &quot;Your Username&quot; #要输入你的用户名(Github)git config --global user.email &quot;Your Email Address&quot; #要输入你的邮箱地址(Github) 注意这里Your Username和Your Email Address就是注册GitHub账号时的用户名和邮箱。因为使用仓库前，要通过Username和Email标明自己的身份。2.保持刚才的窗口继续输入以下命令 123cd ~/.sshssh-keygen -t rsa -C &quot;Your Email Address&quot; 注意在输入cd ~/.ssh时，如果提示：No such file or directory， 说明你是第一次使用Git，没有影响。cd ~/.ssh用来检查本机的ssh密钥，ssh-keygen -t rsa -C “Your Email Address”用于生成新的SSH Key。执行命令之后，出现下面内容 123Generating public/private rsa key pair.Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa): 这里我们直接敲击回车然后会出现提示输入密码Enter passphrase (empty for no passphrase):【输入加密串】【加密串我们看不见，所以你输密码的时候不要以为没输入进去，你直接输入就好，输完密码按回车键确定就行】Enter same passphrase again:【再次输入加密串】如果密码输入不一致，会提示再次输入：Passphrases do not match. Try again.这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。如果出现下图的界面，就说明key生成成功。同时从Your public key has been saved in /c/Users/User/.ssh/id_rsa.pub.能看到ssh key保存的位置。 添加 SSH Key 到 GitHub1.继续返回到我们的Github网站中，按照顺序点击右上角的头像-Settings-SSH and GPG keys -New SSH key2.然后使用Notepad++打开本地id_rsa.pub文件，也就是刚才生成的SSH key。如果看不到这个文件，需要设置显示隐藏的文件。将本地文件里的SSH key全选复制粘贴到刚刚GitHub上通过New SSH key创建的key方框里，Title随便写或者直接空着不写也可以，直接点击Add SHH key就好了。3.在GitHub添加SSH key之后，我们需要测试是否添加成功，输入ssh -T git@github.com，如果出现下图的问题，没关系直接输入yes即可！ 1234567The authenticity of host &apos;github.com (192.30.255.113)&apos; can&apos;t be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.Are you sure you want to continue connecting (yes/no)?输入yes之后输入我们项目的密码nter passphrase for key &apos;/c/Users/User/.ssh/id_rsa&apos;:【这里的密码也是加密串】 4.当系统出现如下提示时，说明成功了。 1Hi HandsomeSuperRed! You&apos;ve successfully authenticated, but GitHub does not provide shell access. Hexo安装刚才的准备工作做了一大堆，也没有看到实在的东西，这里我们进行到这一步就可以有本地的博客了。开始喽！1.首选安排好你的博客安装路径，在此路径右击找到GitBash,例如我们的目录为D:\Myblog\Blog，右击Git Bash Here 2.打开Git Bash以后输入npm install -g hexo-cli安装Hexo，安装好以后不要关闭Git Bash，接下来还要用。Hexo有它的默认路径，能够看到Hexo都安装在了C盘。 Hexo部署1.安装好hexo之后，我们需要执行下面三条命令进行初始化工作 12345hexo init &lt;folder&gt; #初始化hexo(是你要保存博客内容的文件夹的名字。)cd &lt;folder&gt; #进入此目录npm install #安装 其中， 例如我想将博客保存在Hexo目录中，那我就使用hexo init Hexo命令。如果你不想用Hexo命名，你想将文件夹叫做Handsome，那你可以使用Hexo init Handsome命令。所以上面三个命令就是： 12345hexo init Hexocd Hexonpm install 执行命令的界面所示2.三条命令执行过后，看一下我们刚才Hexo的目录内容，其中_config.yml文件是我们用的比较多的配置文件3.Hexo初始化之后，我们需要部署并且开启服务，执行下面三条命令 12345hexo generatehexo deploy hexo server 效果如下图所示4.然后系统会出现如下提示： 123INFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 浏览器访问http://localhost:4000/，发现Hexo在本地已经部署好了！ 将本地文件(Hexo)部署至Github1.找到我们上面说的Hexo的配置文件使用工具打开进行编辑，找到deploy一项修改成如图所示 1234deploy: type: git repo: git@github.com:LiuXiangYang-Git/LiuXiangYang-Git.github.io.git branch: master 注意这里的repo需要进行修改更改成自己的地址，获取方式如下，将其复制到type后面即可，还有一个需要注意的地方是冒号后面一定要加空格，否则部署会失败 2.更改完之后保存，这里我们就可以使用hexo命令发布到仓库中了，还是同样的命令(发布到本地) 12345hexo cleanhexo generatehexo deploy 如果出现下面的提示恭喜你成功了！3.这时就已经部署到 GitHub 上了，可以到你的GitHub仓库查看是否已经更新。4.成功之后，这个地址就是我们的博客域名了，可以使用他来访问你的博客，当然如果你有自己的博客，也可以修改成自己的。 1https://liuxiangyang-git.github.io/ 只要将一级域名更改成你的账户名即可！5.后面教程我们在详细实践如何自定义网站内容，我也是在摸索后面持续更新。。。 总结一顿操作下来虽然有点儿累，但看见拥有了自己的博客还是非常有成就感的，人生就是需要折腾，那么现在就开始你的创作之旅吧！文章的不断积累，你会从中受益很多的！]]></content>
-      <categories>
-        <category>GitHub</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[超实用的19个电脑快捷键]]></title>
     <url>%2F2019%2F09%2F08%2F00016%2F</url>
     <content type="text"><![CDATA[Ctrl + f = 搜索Ctrl + x = 剪切Ctrl + v = 粘贴Ctrl + z = 撤销Ctrl + p = 唤出打印机Win + d = 返回桌面Win + e = 文件资源管理器Win + l = 电脑锁屏Alt + F4 = 直接关闭当前程序Win + r = 唤出运行Shift + Delete = 彻底删除文件F2 文件重命名Delete 删除F5刷新当前页面Alt + 空格 +c = 关闭当前程序Pagedown 向下翻页Pageup 向上翻页Ctrl + Shift + N 新建文件夹]]></content>
@@ -227,41 +227,6 @@
       </categories>
       <tags>
         <tag>system</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[如何用手机方便的控制个人电脑]]></title>
-    <url>%2F2019%2F09%2F08%2F00024%2F</url>
-    <content type="text"><![CDATA[简言这个教教大家用手机连接电脑的方法，手机端和电脑端都下载相同的远程软件，例如Teamviewerr，将电脑端的id和密码输入即可进入 还有进阶级操作，配合远程开机软件，你可以在任意的一个地方随时控制你的电脑，文件传输，远程控制你的电脑，远程投送你的屏幕,魔兽远程排队等等！ 推荐软件1.向日葵远程控制软件，优秀的国产代表，由上海贝瑞科技公司出品。 2.Teamviewer老牌的远程控制软件了，相信大家应该接触过。 3.AnyDesk2014年成立于德国，全球使用客户超过8000万。]]></content>
-      <categories>
-        <category>Window</category>
-      </categories>
-      <tags>
-        <tag>远程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[关于域名的小知识]]></title>
-    <url>%2F2019%2F09%2F08%2F00027%2F</url>
-    <content type="text"><![CDATA[域名解析记录中的各符号域名解析是把域名指向网站空间IP，让人们通过注册的域名可以方便地访问到网站一种服务。域名解析也叫域名指向、服务器设置、域名配置以及反向IP登记等等。说得简单点就是将好记的域名解析成IP，服务由DNS服务器完成，是把域名解析到一个IP地址，然后在此IP地址的主机上将一个子目录与域名绑定。 @ 这个代表不带www的域名 liuxiangyang.space *这个是泛解析(包含除liuxiangyang.space外的所有二级域名) www 表示 www.liuxiangyang.space的解析 A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。 说明：用户可以将该域名下的网站服务器指向到自己的网络服务器上。同时也可以设置自己域名的二级域名。 A记录解析 域名解析记录类型选择“A”；线路类型选择通用或者同时添加三条线路类型为电信、网通、教育网的记录；记录值填写空间商提供的主机IP地址；MX优先级不需要设置；TTL设置默认的3600即可 CNAME记录解析 CNAME类型解析设置的方法和A记录类型基本是一样的，其中将记录类型修改为“CNAME”，并且记录值填写服务器主机地址即可。 泛域名解析 泛域名解析是指将.域名解析到同一IP。在域名前添加任何子域名，均可访问到所指向的WEB地址。也就是客户的域名ga5.net之下所设的.ga5.net全部解析到同一个IP地址上去。比如客户设**.ga5.net就会自己自动解析到与ga5.net同一个IP地址上去。 www和不加www的区别通俗的说，domain.com 是一级域名，而在这之前的任何名称，比如 anything.domain.com 都是二级域名。因此实际上，www.domain.com 是域名 domain.com 的一个二级域名，只不过是一个比较特殊的二级域名罢了。他的特殊就在于现在的实践中，人们在解析域名的的时候，在惯例和默认的情况下，是把 www.domain.com 这个二级域名指向它的一级域名 domain.com。因此，现在的大部分情况下，domain.com 和 www.domain.com，都是一样的，有和没有 www 一般没有关系。 www是主机名，是管理员加上去的，代表访问这个域名即是访问该网站的万维网服务。本来就可以不加啊。主机名也可以写成ftp，代表访问该网站的文件传输服务。添加记录的时候管理员决定的。]]></content>
-      <categories>
-        <category>Summary</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>域名</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[关于博客的那些事]]></title>
-    <url>%2F2019%2F09%2F08%2F00021%2F</url>
-    <content type="text"><![CDATA[简言本来只是想搭建一个博客让自己凌乱的笔记显得正常和体面一些，但是被网上各种各样的技术带入各种坑位，本着不折腾不会死的态度全部通关一遍，于是便有了此文。我尝试了几个目前比较流行的搭建博客的方式，通过搭建的技术门槛和颜值等分别做简单介绍，如果你正准备搭建一个博客，能够比较直观的了解目前流行的技术和最终的实现效果，帮助你做出适合自己的选择。穿梭于各种博客中，并且记录当下主流的博客平台和相关技术，相信会给你提供帮助！没有详细的博客安装教程，安装请查看官方文档或自行摆渡xx教程、xx一键包。后文会提供部分搭建博客的教程。 怎么面对博客 博客不像微博，有一定的含金量，而不是走马灯的宣言 写作的过程其实就是思考的字面化，梳理知识体系的同时反思知识的内化程度，分清楚哪些是“知道了”，哪些是“掌握了” 通过博客的形式分享是学习的一种技巧（费曼技巧，让小孩子明白你要讲述的内容），内化知识的同时也从分享中得到快乐 用写作来记录成长的过程，保持这种习惯能让你听到意志力成长的声音 同时博客也是一种无形的资产，量变的积累过程兴许会带来许多隐形的机会（接广告，出书啊等等知乎上忽悠的），总之多写总没错 怎么把博客放在网上目前比较流行的博客实现可以分为三种方式，各有不同程度的技术门槛、功能支持、主题颜值等。接下来将会通过实例展示不同的博客形式。 个人主页注册。指的是在现有的博客网站、论坛或社区上注册个人主页 静态网站生成。通常是由jekyll、hugo或hexo等技术生成静态网站，然后通过git上传到Github Pages、Coding Pages等托管平台免费展示 内容管理系统。带有后台管理的博客系统，需要配置空间（服务器）、数据库以及域名等，然后安装成熟的WordPress、ghost等内容管理系统 个人主页注册注册形式的个人博客，优势是没有技术门槛，注册即用；拥有成熟的平台支持，方便推广。但是平台风格单一，不仅自定义程度低，而且还有许多形式限制（当然限制也有专心于内容的好处），推荐给嫌麻烦不喜欢折腾又不反感条条框框的人。1）SegmentFault 中式StackOverFlow论坛，成熟的技术交流平台 网站提供文章专栏板块，并且有审核机制 功能： Markdown / 标签 / 评论 / 智能目录 lipstick 颜值：正常 / 简洁2）简书 专注文字的轻博客平台，定位清新 功能：Markdown / 评论 / 标签 lipstick 颜值：正常 / 干净3）知乎 泛娱乐化的专业知识交流平台，提供文章板块 功能：Markdown / 评论 / 标签 颜值：正常 / 大气4） CSDN 老牌技术论坛 关注公众号才能注册，8位数验证码等一堆反人类交互体验很不是能忍 功能：Markdown / 评论 / 标签 / 皮肤 / 老式文章管理 颜值：不卸妆的话还能看，卸妆就…5）博客园 元老级技术论坛，申请博客需要人工审核（上班时间8分钟通过 功能：Markdown / 评论 / 标签 / 老式文章管理 / RSS / 年代感皮肤 / 相册 / 文件 颜值：Logo可以有不止3种Word渐变色3D投影展示，老得有味道 静态网站生成技术技术门槛： Markdown / Linux命令 / git / Github Pages / 域名解析 生成静态网站。文章以特定的标头格式书写，放置在指定的文件夹，执行命令快速生成完整的静态网站；通过git将文件上传至Github或Coding等代码托管平台，这些平台提供免费展示页面功能。 快速搭建。静态网站生成的博客很轻，可以绑定自己的域名，适合中小型项目快速建站，省去服务器费用、免去搭建配置服务器等的繁琐过程。官网文档都有详细的教程，配置好所需环境后，理论上搭建一个静态网站到上线只需要输入10多行命令，不熟悉的话一般40分钟左右就可以上线（熟悉的话10分钟），并且这些技术都有贴心的本地预览功能。当然，也正因为轻，没有数据库的支持，所以对于有多图和高清图片、大体量博客等需求实现起来不是非常友好。 自定义程度高。静态网站生成技术提供一系列可以配置CSS样式和修改网页行为的方式，有可供选择的大量插件，很容通过插件实现评论、搜索、分析等你想要的所有功能（标配并不带有这些功能）。 主题丰富，高颜值。静态网站的主题不是简单的皮肤，而是一个静态网站的解决方案，一般会内置插件并且提供许多实用场景的解决方案，如代码高亮、图像支持等等。 技术更新迭代快。静态网站升生成技术相关的讨论很活跃，因此更新维护及时，出现问题比较容易解决。反作用是因为更新换代非常快，而且官网提供各种技术间的快速迁移，所以如果入坑的话比较容易掉入深坑无法自拔，谨慎入坑。 目前比较流行的有jekyll、hugo以及hexo等方式，一般将网站搭在Github Pages或Coding Pages上。通过生成网站搭建博客的方式相对来说有一点点繁琐，因为每次发布文章都需要重新生成，虽然操作很简单（当然可以配置自动化部署），但也是需要那么几步操作。推荐给喜欢新技术，喜欢自定义，不折腾不痛快的人。 6）hexo 基于Node技术实现快速生成，Github代码库12k+ 安装过程一路流畅，没有波折，配置、发布人性化，十分贴心 社区活跃，对技术不熟且英文不要的人非常友好 主题155+，高颜值7）hugo 基于GO语言实现，极速生成网站，Github代码库11k+ 安装配置十分流畅，但是在部署发布时遇到一点坎坷（需要了解一点Shell脚本 相对来说中文不是很友好，中文社区不是很活跃 主题670+，品位和颜值7）jekyll 基础Ruby实现，Github官方推荐亲儿子，Github代码库30k+ 因为有后台，所以可以任性不依赖本地环境配置，直接在网站上生成 本地环境配置上有一些坑位，高级但是不友好（反正我是踩坑了 主题只能说正常，总有一种不是官方在维护皮肤的感觉 以上的3种技术的配置流程和搭建思路大同小异，彼此之间都提供低成本迁移办法如果害怕国外服务器大姨妈，以及对于搜索引擎收录有需求的话，建议搭在Coding Pages上，比较省心（会员等级不够高会有广告跳转，解决方式是主页上帮他作广告）如果通过Github托管的话，另外推荐静态网站专业托管平台Netlify，虽然自动编译还有很多坑位，但是可以自动插入HTML代码到post、免费实现https、SSL / TLS等功能、DNS解析等等 内容管理系统技术门槛：服务器 / 域名解析 / 数据库 / Linux命令 / ftp 后台管理。具有贴心的后台界面，可以管理文章、相册、主题等。因为有数据库支持，所以可以实现多用户维护管理，高清大图上传等。 高级还免费。内置搜索、评论等常用功能，还有丰富的插件市场可以轻松满足各种需求。免费使用系统，但是配置服务器需要支付一定的费用（低配年费要大几百）。 丰富与臃肿。如今是用户体验当道和流行扁平化的时代，和往前大而多的需求不太一样，所以现在对于这种臃肿的博客系统是既爱又恨，爱他的丰富，又嫌弃人家的大脑袋。 高门槛。搭建一个后台管理式博客系统需要了解比较多的web知识，例如服务器，域名解析，数据库等知识都需要简单了解。虽然各大服务器商均有提供WordPress服务器镜像，可以实现5分钟快速搭建，但是如果不了解一些基本的web知识，会比较容易在搭建和使用过程中摸不着头脑。 9）WordPress 15岁高龄，现在是从php编写到开源后采用各种流行语言重写的第二春 市场占有率超高的内容管理系统，做博客只是功能之一，搭企业级网站也是很轻松 中文最友好了，服务器镜像5分钟搭建网站，一键包安装也是轻松带微笑 颜值中上，形式非常丰富，可以适合各类工种的需求10）ghost 基于Node实现的，社区活跃度高 相比WordPress去掉许多臃肿的功能，简洁大气 专为写作生产力的极致博客系统，WordPress良好替代品 有一定的搭建门槛，我用一键包也踩了很多坑位，花了90分钟才搭建完成 颜值是所有例子中最高的，好评 总结新手村指南。如果你是新手，对于以上的技术门槛一窍不通，但是又想要主题精美的个人博客网站，建议从Markdown语言开始学起（半天入门，一天出师），之后只需要了解一些基本的命令行知识和git操作，就可以跟随各种教程，从生成静态网站入门快速搭建博客，完全不花钱。个人推荐（良心推荐不收钱） 首推hexo。性价比最高，中文友好，快速上线，贴心配置，免费高颜值 其次WordPress。满足多人维护的需求，资料繁多等需求，可以一劳永逸，虽然门槛高一点，体量大了点，还要花钱，但是很稳定，很有安全感。 个人博客最终选择了hugo + Gihub + Netlify，可以来参考丢鸡蛋 审美强迫症友情提示：hugo的颜值高于hexo，可以低成本无痛迁移；ghost颜值甩WordPress，为了美需要舍弃一些功能]]></content>
-      <categories>
-        <category>Summary</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>technology</tag>
       </tags>
   </entry>
   <entry>
@@ -277,15 +242,38 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Github pagers搭建的博客使用自定义域名以及购买域名等设置]]></title>
-    <url>%2F2019%2F09%2F08%2F00002%2F</url>
-    <content type="text"><![CDATA[一、简言由于有个人需求，需要使用到域名，思来想去还是有一个自己的域名好一点，也就是钱的问题，而且域名现在也不贵，拿出自己的部分零花钱购买一个域名也不为过。这里记录下自己在阿里云购买域名的过程。当然了大家也可以在其他平台购买域名，主流的有Daddy、阿里云、腾讯云、华为云等等。 二、 购买域名阿里云平台登录阿里云，万网已经被阿里爸爸收购了，所以在这里我们看到是阿里云旗下品牌，在此选项框输入自己想好的域名看看有没有被占用。 https://account.aliyun.com 后缀名有很多，根据名称有不同的寓意，例如.top展现行业地位、.xin网络诚信专属域名、.cloud云端域名、.space你的专属网络空间。不同的域名价格也不太一样。贵的类似于.com .我爱你 .cn等等。我这里就选择购买了.space的后缀名。写入域名之后，下面会出现域名的情况，选择满意的加入到清单中 然后点击立即结算即可完成，完成之后我们进入至控制台。 这样我们就看到自己购买的域名列表了。在解析之前，我们要完成实名认证才可以去使用它。 这大概要两三天的时间，完成实名认证之后，我们就可以添加域名解析了。 点击解析设置，进入解析我们的域名 添加记录 记录类型点击将域名指向一个地址 主机记录写@，解析线路默认，记录值这里我们写ping自己的博客的地址，TTL为10分钟 再写一个主机记录修改为www。两个记录类型已经完成，这里我们的阿里云就完成设置了。 Github配置hexo添加CNAME在hexo本地目录 source 目录下面新建一个文件，取名为 GNAME (无后缀)，内容就是上面所说到的自己的域名如下： 1liuxiangyang.space 运行hexo指令使配置修改起效： 12hexo g //会在public中生成一个GNAME文件hexo d //修改内容提交到github博客上 Github绑定个人域名这是比较重要的一步，打开博客在Github中的地址，然后切换到 Settings页，设置Custom domain内容为我们自己的域名值（例如：我的域名是liuxiangyang.space），点击Save按钮保存： 小知识总结这样我们就完成了使用自己域名解析到自己的博客中，美美哒，访问我们的域名地址即可进入到博客。]]></content>
+    <title><![CDATA[关于域名的小知识]]></title>
+    <url>%2F2019%2F09%2F08%2F00027%2F</url>
+    <content type="text"><![CDATA[域名解析记录中的各符号域名解析是把域名指向网站空间IP，让人们通过注册的域名可以方便地访问到网站一种服务。域名解析也叫域名指向、服务器设置、域名配置以及反向IP登记等等。说得简单点就是将好记的域名解析成IP，服务由DNS服务器完成，是把域名解析到一个IP地址，然后在此IP地址的主机上将一个子目录与域名绑定。 @ 这个代表不带www的域名 liuxiangyang.space *这个是泛解析(包含除liuxiangyang.space外的所有二级域名) www 表示 www.liuxiangyang.space的解析 A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。 说明：用户可以将该域名下的网站服务器指向到自己的网络服务器上。同时也可以设置自己域名的二级域名。 A记录解析 域名解析记录类型选择“A”；线路类型选择通用或者同时添加三条线路类型为电信、网通、教育网的记录；记录值填写空间商提供的主机IP地址；MX优先级不需要设置；TTL设置默认的3600即可 CNAME记录解析 CNAME类型解析设置的方法和A记录类型基本是一样的，其中将记录类型修改为“CNAME”，并且记录值填写服务器主机地址即可。 泛域名解析 泛域名解析是指将.域名解析到同一IP。在域名前添加任何子域名，均可访问到所指向的WEB地址。也就是客户的域名ga5.net之下所设的.ga5.net全部解析到同一个IP地址上去。比如客户设**.ga5.net就会自己自动解析到与ga5.net同一个IP地址上去。 www和不加www的区别通俗的说，domain.com 是一级域名，而在这之前的任何名称，比如 anything.domain.com 都是二级域名。因此实际上，www.domain.com 是域名 domain.com 的一个二级域名，只不过是一个比较特殊的二级域名罢了。他的特殊就在于现在的实践中，人们在解析域名的的时候，在惯例和默认的情况下，是把 www.domain.com 这个二级域名指向它的一级域名 domain.com。因此，现在的大部分情况下，domain.com 和 www.domain.com，都是一样的，有和没有 www 一般没有关系。 www是主机名，是管理员加上去的，代表访问这个域名即是访问该网站的万维网服务。本来就可以不加啊。主机名也可以写成ftp，代表访问该网站的文件传输服务。添加记录的时候管理员决定的。]]></content>
       <categories>
-        <category>GitHub</category>
-        <category>Hexo</category>
+        <category>Summary</category>
       </categories>
       <tags>
         <tag>blog</tag>
+        <tag>域名</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何用手机方便的控制个人电脑]]></title>
+    <url>%2F2019%2F09%2F08%2F00024%2F</url>
+    <content type="text"><![CDATA[简言这个教教大家用手机连接电脑的方法，手机端和电脑端都下载相同的远程软件，例如Teamviewerr，将电脑端的id和密码输入即可进入 还有进阶级操作，配合远程开机软件，你可以在任意的一个地方随时控制你的电脑，文件传输，远程控制你的电脑，远程投送你的屏幕,魔兽远程排队等等！ 推荐软件1.向日葵远程控制软件，优秀的国产代表，由上海贝瑞科技公司出品。 2.Teamviewer老牌的远程控制软件了，相信大家应该接触过。 3.AnyDesk2014年成立于德国，全球使用客户超过8000万。]]></content>
+      <categories>
+        <category>Window</category>
+      </categories>
+      <tags>
+        <tag>远程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于博客的那些事]]></title>
+    <url>%2F2019%2F09%2F08%2F00021%2F</url>
+    <content type="text"><![CDATA[简言本来只是想搭建一个博客让自己凌乱的笔记显得正常和体面一些，但是被网上各种各样的技术带入各种坑位，本着不折腾不会死的态度全部通关一遍，于是便有了此文。我尝试了几个目前比较流行的搭建博客的方式，通过搭建的技术门槛和颜值等分别做简单介绍，如果你正准备搭建一个博客，能够比较直观的了解目前流行的技术和最终的实现效果，帮助你做出适合自己的选择。穿梭于各种博客中，并且记录当下主流的博客平台和相关技术，相信会给你提供帮助！没有详细的博客安装教程，安装请查看官方文档或自行摆渡xx教程、xx一键包。后文会提供部分搭建博客的教程。 怎么面对博客 博客不像微博，有一定的含金量，而不是走马灯的宣言 写作的过程其实就是思考的字面化，梳理知识体系的同时反思知识的内化程度，分清楚哪些是“知道了”，哪些是“掌握了” 通过博客的形式分享是学习的一种技巧（费曼技巧，让小孩子明白你要讲述的内容），内化知识的同时也从分享中得到快乐 用写作来记录成长的过程，保持这种习惯能让你听到意志力成长的声音 同时博客也是一种无形的资产，量变的积累过程兴许会带来许多隐形的机会（接广告，出书啊等等知乎上忽悠的），总之多写总没错 怎么把博客放在网上目前比较流行的博客实现可以分为三种方式，各有不同程度的技术门槛、功能支持、主题颜值等。接下来将会通过实例展示不同的博客形式。 个人主页注册。指的是在现有的博客网站、论坛或社区上注册个人主页 静态网站生成。通常是由jekyll、hugo或hexo等技术生成静态网站，然后通过git上传到Github Pages、Coding Pages等托管平台免费展示 内容管理系统。带有后台管理的博客系统，需要配置空间（服务器）、数据库以及域名等，然后安装成熟的WordPress、ghost等内容管理系统 个人主页注册注册形式的个人博客，优势是没有技术门槛，注册即用；拥有成熟的平台支持，方便推广。但是平台风格单一，不仅自定义程度低，而且还有许多形式限制（当然限制也有专心于内容的好处），推荐给嫌麻烦不喜欢折腾又不反感条条框框的人。1）SegmentFault 中式StackOverFlow论坛，成熟的技术交流平台 网站提供文章专栏板块，并且有审核机制 功能： Markdown / 标签 / 评论 / 智能目录 lipstick 颜值：正常 / 简洁2）简书 专注文字的轻博客平台，定位清新 功能：Markdown / 评论 / 标签 lipstick 颜值：正常 / 干净3）知乎 泛娱乐化的专业知识交流平台，提供文章板块 功能：Markdown / 评论 / 标签 颜值：正常 / 大气4） CSDN 老牌技术论坛 关注公众号才能注册，8位数验证码等一堆反人类交互体验很不是能忍 功能：Markdown / 评论 / 标签 / 皮肤 / 老式文章管理 颜值：不卸妆的话还能看，卸妆就…5）博客园 元老级技术论坛，申请博客需要人工审核（上班时间8分钟通过 功能：Markdown / 评论 / 标签 / 老式文章管理 / RSS / 年代感皮肤 / 相册 / 文件 颜值：Logo可以有不止3种Word渐变色3D投影展示，老得有味道 静态网站生成技术技术门槛： Markdown / Linux命令 / git / Github Pages / 域名解析 生成静态网站。文章以特定的标头格式书写，放置在指定的文件夹，执行命令快速生成完整的静态网站；通过git将文件上传至Github或Coding等代码托管平台，这些平台提供免费展示页面功能。 快速搭建。静态网站生成的博客很轻，可以绑定自己的域名，适合中小型项目快速建站，省去服务器费用、免去搭建配置服务器等的繁琐过程。官网文档都有详细的教程，配置好所需环境后，理论上搭建一个静态网站到上线只需要输入10多行命令，不熟悉的话一般40分钟左右就可以上线（熟悉的话10分钟），并且这些技术都有贴心的本地预览功能。当然，也正因为轻，没有数据库的支持，所以对于有多图和高清图片、大体量博客等需求实现起来不是非常友好。 自定义程度高。静态网站生成技术提供一系列可以配置CSS样式和修改网页行为的方式，有可供选择的大量插件，很容通过插件实现评论、搜索、分析等你想要的所有功能（标配并不带有这些功能）。 主题丰富，高颜值。静态网站的主题不是简单的皮肤，而是一个静态网站的解决方案，一般会内置插件并且提供许多实用场景的解决方案，如代码高亮、图像支持等等。 技术更新迭代快。静态网站升生成技术相关的讨论很活跃，因此更新维护及时，出现问题比较容易解决。反作用是因为更新换代非常快，而且官网提供各种技术间的快速迁移，所以如果入坑的话比较容易掉入深坑无法自拔，谨慎入坑。 目前比较流行的有jekyll、hugo以及hexo等方式，一般将网站搭在Github Pages或Coding Pages上。通过生成网站搭建博客的方式相对来说有一点点繁琐，因为每次发布文章都需要重新生成，虽然操作很简单（当然可以配置自动化部署），但也是需要那么几步操作。推荐给喜欢新技术，喜欢自定义，不折腾不痛快的人。 6）hexo 基于Node技术实现快速生成，Github代码库12k+ 安装过程一路流畅，没有波折，配置、发布人性化，十分贴心 社区活跃，对技术不熟且英文不要的人非常友好 主题155+，高颜值7）hugo 基于GO语言实现，极速生成网站，Github代码库11k+ 安装配置十分流畅，但是在部署发布时遇到一点坎坷（需要了解一点Shell脚本 相对来说中文不是很友好，中文社区不是很活跃 主题670+，品位和颜值7）jekyll 基础Ruby实现，Github官方推荐亲儿子，Github代码库30k+ 因为有后台，所以可以任性不依赖本地环境配置，直接在网站上生成 本地环境配置上有一些坑位，高级但是不友好（反正我是踩坑了 主题只能说正常，总有一种不是官方在维护皮肤的感觉 以上的3种技术的配置流程和搭建思路大同小异，彼此之间都提供低成本迁移办法如果害怕国外服务器大姨妈，以及对于搜索引擎收录有需求的话，建议搭在Coding Pages上，比较省心（会员等级不够高会有广告跳转，解决方式是主页上帮他作广告）如果通过Github托管的话，另外推荐静态网站专业托管平台Netlify，虽然自动编译还有很多坑位，但是可以自动插入HTML代码到post、免费实现https、SSL / TLS等功能、DNS解析等等 内容管理系统技术门槛：服务器 / 域名解析 / 数据库 / Linux命令 / ftp 后台管理。具有贴心的后台界面，可以管理文章、相册、主题等。因为有数据库支持，所以可以实现多用户维护管理，高清大图上传等。 高级还免费。内置搜索、评论等常用功能，还有丰富的插件市场可以轻松满足各种需求。免费使用系统，但是配置服务器需要支付一定的费用（低配年费要大几百）。 丰富与臃肿。如今是用户体验当道和流行扁平化的时代，和往前大而多的需求不太一样，所以现在对于这种臃肿的博客系统是既爱又恨，爱他的丰富，又嫌弃人家的大脑袋。 高门槛。搭建一个后台管理式博客系统需要了解比较多的web知识，例如服务器，域名解析，数据库等知识都需要简单了解。虽然各大服务器商均有提供WordPress服务器镜像，可以实现5分钟快速搭建，但是如果不了解一些基本的web知识，会比较容易在搭建和使用过程中摸不着头脑。 9）WordPress 15岁高龄，现在是从php编写到开源后采用各种流行语言重写的第二春 市场占有率超高的内容管理系统，做博客只是功能之一，搭企业级网站也是很轻松 中文最友好了，服务器镜像5分钟搭建网站，一键包安装也是轻松带微笑 颜值中上，形式非常丰富，可以适合各类工种的需求10）ghost 基于Node实现的，社区活跃度高 相比WordPress去掉许多臃肿的功能，简洁大气 专为写作生产力的极致博客系统，WordPress良好替代品 有一定的搭建门槛，我用一键包也踩了很多坑位，花了90分钟才搭建完成 颜值是所有例子中最高的，好评 总结新手村指南。如果你是新手，对于以上的技术门槛一窍不通，但是又想要主题精美的个人博客网站，建议从Markdown语言开始学起（半天入门，一天出师），之后只需要了解一些基本的命令行知识和git操作，就可以跟随各种教程，从生成静态网站入门快速搭建博客，完全不花钱。个人推荐（良心推荐不收钱） 首推hexo。性价比最高，中文友好，快速上线，贴心配置，免费高颜值 其次WordPress。满足多人维护的需求，资料繁多等需求，可以一劳永逸，虽然门槛高一点，体量大了点，还要花钱，但是很稳定，很有安全感。 个人博客最终选择了hugo + Gihub + Netlify，可以来参考丢鸡蛋 审美强迫症友情提示：hugo的颜值高于hexo，可以低成本无痛迁移；ghost颜值甩WordPress，为了美需要舍弃一些功能]]></content>
+      <categories>
+        <category>Summary</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>technology</tag>
       </tags>
   </entry>
   <entry>
@@ -298,6 +286,18 @@
       </categories>
       <tags>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博客编辑器最佳推荐]]></title>
+    <url>%2F2019%2F09%2F08%2F00014%2F</url>
+    <content type="text"><![CDATA[简言博客搭建好之后，我们就要去完善其内容，将工作中的笔记和教程以及好用的软件总结成文章。使用了一段时间之后，总结了几个编辑工具，推荐给大家！ 软件推荐Notepad这个就不用了介绍了，大家熟知的类似于加强版的文本编辑工具。 HexoEditor这个看名字就知道了,与Hexo结合的博客编辑工具，当然了在使用之前要先装好Git和Node.js。提供左右两种视图， 左边修改文档，右边直接显示生成的界面。这是一款为 Hexo 做了优化的 Markdown 编辑器,使用 Electron 做框架修改自 Moeditor,同时它还包括很多功能，其中我觉得最有用的就是：预览内容与 Hexo 生成页面内容高度相似。这里因为它是Github的发布的开源项目，提供下载地址https://github.com/zhuzhuyule/HexoEditor/releases Typora这是一款极致简洁的 markdown 编辑器。简洁到连编辑栏工具都没有，不过用起来很舒服，谁用谁知道。这里提供下载链接，然后下载对应的版本即可。 https://www.typora.io/]]></content>
+      <categories>
+        <category>Window</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
